@@ -1,0 +1,67 @@
+:host {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+
+flipbook {
+  filter: drop-shadow(0px 7px 6px #00000040)
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: absolute;
+  bottom: 5px;
+  padding: 0 20px;
+  background: #1e1e1e;
+  border-radius: 4px;
+  right: -15%;
+}
+
+button.btn-controlls {
+  background: transparent;
+  border: none;
+  background: none;
+  padding: 10px 5px;
+}
+button.btn-controlls svg {
+  fill: #fff;
+  width: 24px;
+}
+.cover {
+
+}
+.btn-controlls:focus-visible {
+  box-shadow: none;
+  border: none;
+}
+.img-thumb {
+  width: 100px;
+  cursor: pointer;
+}
+.btn-close {
+  display: inline-block;
+  position: absolute;
+  right: -120%;
+  top: 0px;
+  background: #000;
+  padding: 10px 10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 0;
+  z-index: 9999;
+}
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+.btn-close img {
+  width: 70%;
+}

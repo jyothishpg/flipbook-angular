@@ -1,0 +1,43 @@
+<ng-template #content let-modal>
+  <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    <img src="assets/demo/close.svg" alt="close">
+  </button>
+	<flipbook [model]="demoBook" [startAt]="startAt" class="flip-dimension" #fullScreen></flipbook>
+  <div class="controls">
+    <button class="btn-controlls" (click)="onPrev()">
+        <svg fill="#000000" height="16px" width="16px" version="1.1" id="XMLID_54_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+      viewBox="0 0 24 24" xml:space="preserve">
+          <g id="previous">
+            <g>
+              <polygon points="17.2,23.7 5.4,12 17.2,0.3 18.5,1.7 8.4,12 18.5,22.3 		"/>
+            </g>
+          </g>
+        </svg>
+    </button>
+    <button class="btn-controlls" (click)="onNext()">
+      <svg fill="#000000" height="16px" width="16px" version="1.1" id="XMLID_287_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+    viewBox="0 0 24 24" xml:space="preserve">
+        <g id="next">
+          <g>
+            <polygon points="6.8,23.7 5.4,22.3 15.7,12 5.4,1.7 6.8,0.3 18.5,12 		"/>
+          </g>
+        </g>
+      </svg>
+    </button>
+    <button class="btn-controlls open" (click)="toggleFullscreen()">
+      <svg fill="#000000" width="16px" height="16px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000"><polyline points="20 8 8 8 8 20"/><line x1="8" y1="8" x2="24" y2="24"/><polyline points="56 20 56 8 44 8"/><line x1="56" y1="8" x2="40" y2="24"/><polyline points="44 56 56 56 56 44"/><line x1="56" y1="56" x2="40" y2="40"/><polyline points="8 44 8 56 20 56"/><line x1="8" y1="56" x2="24" y2="40"/></svg>
+    </button>
+    <!-- <button class="btn-controlls close" (click)="closeFullscreen()">
+      <svg fill="#000000" width="16px" height="16px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000"><polyline points="52 40 40 40 40 52"/><line x1="40" y1="40" x2="56" y2="56"/><polyline points="24 52 24 40 12 40"/><line x1="24" y1="40" x2="8" y2="56"/><polyline points="12 24 24 24 24 12"/><line x1="24" y1="24" x2="8" y2="8"/><polyline points="40 12 40 24 52 24"/><line x1="40" y1="24" x2="56" y2="8"/></svg> 
+    </button> -->
+    
+
+  </div>
+</ng-template>
+
+<div>
+  <img src="assets/demo/01-left.png" class="img-thumb" alt="" (click)="open(content)">
+</div>
+
+
+ 

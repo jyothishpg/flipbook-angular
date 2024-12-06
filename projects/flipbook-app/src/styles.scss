@@ -1,0 +1,157 @@
+// @import "bootstrap/scss/functions";
+// @import "bootstrap/scss/variables";
+// @import "bootstrap/scss/bootstrap";
+
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+flipbook-page {
+  left: 45% !important;
+}
+.modal-dialog {
+  margin-left: 15%;
+}
+.modal-content {
+  border-radius: 0 !important;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    margin-left: 15% !important;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .btn-close {
+    position: fixed !important;
+    right: 10px !important;
+    top: 20% !important;
+  }
+  .flip-dimension {
+    width: 100% !important;
+    height: 335px !important;
+    background-size: cover !important;
+    margin-top: 0px;
+  }
+  .page{
+    width: 200px !important;
+    height: 335px !important;
+    background-size: cover !important;
+  }
+  .cover {
+    width: 200px !important;
+    height: 335px !important;
+    border: 1px solid green;
+    background-size: cover !important;
+  }
+  .back {
+    width: 200px !important;
+    height: 335px !important;
+    border: 1px solid green;
+    background-size: cover !important;
+  }
+  .front {
+    width: 200px !important;
+    height: 335px !important;
+    border: 1px solid green;
+    background-size: cover !important;
+  }
+  flipbook-page {
+    left: 50% !important;
+  }
+
+  .controls {
+    bottom: 5px !important;
+    right: 30% !important;
+  }
+  .modal-dialog {
+    margin-left: 8%;
+  }
+
+  .modal-dialog {
+    top: 30%;
+    transform: translateY(-30%);
+  }
+  
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .flip-dimension {
+    width: 100% !important;
+    height: 335px !important;
+    background-size: cover !important;
+    margin-top: 0px;
+  }
+  .page{
+    width: 250px !important;
+    height: 335px !important;
+    background-size: cover !important;
+  }
+  .cover {
+    width: 250px !important;
+    height: 335px !important;
+    border: 1px solid green;
+    background-size: cover !important;
+  }
+  .back {
+    width: 250px !important;
+    height: 335px !important;
+    border: 1px solid green;
+    background-size: cover !important;
+  }
+  .front {
+    width: 250px !important;
+    height: 335px !important;
+    border: 1px solid green;
+    background-size: cover !important;
+  }
+  flipbook-page {
+    left: 50% !important;
+  }
+  .controls {
+    bottom: 5px !important;
+    right: 30% !important;
+  }
+  .btn-close {
+    position: fixed !important;
+    right: 10px !important;
+    top: 5% !important;
+  }
+}
+@media only screen and (min-width: 999px) and (max-width: 1179px) { 
+  .flip-dimension {
+    width: 100% !important;
+    height: 480px !important;
+    background-size: cover !important;
+    margin-top: 0px;
+  }
+  .controls {
+    bottom: 5px !important;
+    right: 30% !important;
+  }
+  flipbook-page {
+    left: 50% !important;
+  }
+  .page{
+    width: 250px !important;
+    height: 480px !important;
+    background-size: cover !important;
+  }
+  .cover {
+    width: 250px !important;
+    height: 480px !important;
+    border: 1px solid green;
+    background-size: cover !important;
+  }
+  .back {
+    width: 250px !important;
+    height: 480px !important;
+    border: 1px solid green;
+    background-size: cover !important;
+  }
+  .front {
+    width: 250px !important;
+    height: 480px !important;
+    border: 1px solid green;
+    background-size: cover !important;
+  }
+}

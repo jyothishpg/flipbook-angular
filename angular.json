@@ -1,0 +1,131 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "6724defe-8822-429c-b0bd-22d8495c1dfb"
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {    
+    "flipbook-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/flipbook-app",
+      "sourceRoot": "projects/flipbook-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": {
+              "base": "dist/flipbook-app"
+            },
+            "index": "projects/flipbook-app/src/index.html",
+            "polyfills": [
+              "projects/flipbook-app/src/polyfills.ts"
+            ],
+            "tsConfig": "projects/flipbook-app/tsconfig.app.json",
+            "assets": [
+              "projects/flipbook-app/src/favicon.ico",
+              "projects/flipbook-app/src/assets"
+            ],
+            "styles": [
+              "projects/flipbook-app/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [],
+            "extractLicenses": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true,
+            "browser": "projects/flipbook-app/src/main.ts"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/flipbook-app/src/environments/environment.ts",
+                  "with": "projects/flipbook-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "flipbook-app:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "flipbook-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "flipbook-app:build"
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/flipbook-app/e2e/protractor.conf.js",
+            "devServerTarget": "flipbook-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "flipbook-app:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "flipbook-lib": {
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/flipbook-lib",
+      "sourceRoot": "projects/flipbook-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/flipbook-lib/tsconfig.lib.json",
+            "project": "projects/flipbook-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/flipbook-lib/tsconfig.lib.prod.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
